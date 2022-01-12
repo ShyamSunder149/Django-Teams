@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} List Teams {% endblock %}
+{% block css %}
+<style>
+
+</style>
+{% endblock %}
+{% block content %}
+<div class="container p-5">
+    <h1 class="text-center">List of Teams</h1>
+    {% for x in a %}
+        <ul>{{x.name}} - {{x.team_type}}</ul>
+    {% endfor %}
+</div>
+
+{% endblock %}

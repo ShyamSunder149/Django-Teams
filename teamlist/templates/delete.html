@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} Delete teams {% endblock %}
+{% block css %}
+<style>
+
+</style>
+{% endblock %}
+{% block content %}
+<div class="container p-5">
+    <h1 class="text-center p-4">Delete teams</h1>
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="exampleInputEmail1">Team Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Team name" name="teamname">
+      
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Delete</button>
+  </form>
+  {% endblock %}
